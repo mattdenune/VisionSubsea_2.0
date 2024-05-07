@@ -1,31 +1,18 @@
 import React from "react";
-import { SlAnchor } from "react-icons/sl";
 
 import landingVideo from "../media/landingVideo_Compressed.mp4";
 import logo from '../media/Logo_VS Horizontal white.png';
 import customerComments from '../Data/customer_comments';
-import testImage from '../media/Vision Subsea Color.png';
+import Hero from "./Hero";
 
 
 const Landingpage = () => (
   <>
-    <Hero />
+    <Hero video={landingVideo} logo={logo} text="See Below the Surface" />
     <InfoSection />
     <Carousel />
   </>
 )
-
-const Hero = () => (
-  <div className="landingpage">
-    <video src={landingVideo} autoPlay muted loop className="video-bg" />
-    <div className="bg-overlay"></div>
-
-    <div className="home-text">
-      <img src={logo} alt="Vision Subsea logo" style={{ width: "50vw" }} />
-      <p>See Below the Surface</p>
-    </div>
-  </div>
-);
 
 const InfoSection = () => (
   <section className="page-section mt-5" id="services">
