@@ -1,0 +1,26 @@
+.aboutImage {
+  width: 100%; 
+  height: auto; 
+  position: absolute;
+}
+
+.aboutCard {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 900px;
+  border: 2px solid white;
+  border-radius: 16px;
+  margin-left: 50px;
+  margin-right: 50px;
+  padding: 15px;
+  position: relative;
+  left: 45%;
+  top: 90px;
+  background-color: white;
+  opacity: 0.8;
+}
+.aboutText {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
