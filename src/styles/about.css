@@ -1,7 +1,12 @@
 .aboutImage {
-  width: 100%; 
-  height: auto; 
+  width: 100vw;
+  height: 'auto';
   position: absolute;
+  overflow-y: scroll;
+}
+
+.aboutContainer {
+  height: 100vh;
 }
 
 .aboutCard {
@@ -17,6 +22,7 @@
   position: relative;
   left: 45%;
   top: 90px;
+  bottom: 0;
   background-color: white;
   opacity: 0.8;
 }
