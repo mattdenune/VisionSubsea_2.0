@@ -21,11 +21,12 @@
   padding: 15px;
   position: relative;
   left: 45%;
-  top: 90px;
+  top: 20%;
   bottom: 0;
   background-color: white;
   opacity: 0.8;
 }
+
 .aboutText {
   margin-top: 20px;
   margin-bottom: 20px;
