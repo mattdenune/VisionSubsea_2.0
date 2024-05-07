@@ -18,6 +18,7 @@ const Navbar = () => {
   window.addEventListener("scroll", changeNavbarColor);
 
   const updateColor = colorChange ? "bg-light" : "";
+  const updateTextColor = colorChange ? "text-black-50" : "text-white";
 
   return (
     <nav
@@ -41,18 +42,18 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item h3">
-              <Link to="/" className="nav-link">
+              <Link to="/" className={`nav-link ${updateTextColor}`}>
                 Home
               </Link>
             </li>
             <li className="nav-item h3">
-              <Link to="/about" className="nav-link">
+            <Link to="/about" className={`nav-link ${updateTextColor}`}>
                 About
               </Link>
             </li>
             <li className="nav-item dropdown h3">
               <a
-                className="nav-link dropdown-toggle"
+                className={`nav-link dropdown-toggle ${updateTextColor}`}
                 href="#"
                 id="navbarDropdown"
                 role="button"
@@ -85,12 +86,12 @@ const Navbar = () => {
               </ul>
             </li>
             <li className="nav-item h3">
-              <Link to="/sonarImaging" className="nav-link">
+              <Link to="/sonarImaging" className={`nav-link ${updateTextColor}`}>
                 Sonar Imaging
               </Link>
             </li>
             <li className="nav-item h3">
-              <Link to="/consulting" className="nav-link">
+              <Link to="/consulting" className={`nav-link ${updateTextColor}`}>
                 Consulting
               </Link>
             </li>

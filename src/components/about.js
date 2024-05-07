@@ -1,8 +1,9 @@
 import React from "react";
+
 import '../styles/about.css';
 
 const About = () => (
-  <div>
+  <>
     <img
       src={require("../media/about_2.jpg")}
       alt="a vision subsea worker"
@@ -30,7 +31,7 @@ const About = () => (
         and successful project completion.
       </h3>
     </div>
-  </div>
+  </>
 );
 
 export default About;
