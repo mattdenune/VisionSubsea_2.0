@@ -2,6 +2,8 @@ import React from "react";
 
 import landingVideo from "../media/Asset and Infrastructure_Compressed.mp4";
 import Hero from "./Hero";
+import CallToAction from "./CallToAction";
+import SectionContainer from "./SectionContainer";
 
 let text = `From Port and Harbor pilings and sewer lines to inland dam and large
 pipeline inspections, VISION SUBSEA uses Remotely Operated Vehicles to
@@ -13,6 +15,9 @@ assessment.`
 const AssetInfrastructure = () => (
   <>
     <Hero video={landingVideo} text= {text}  />
+    <SectionContainer>
+      <CallToAction />
+    </SectionContainer>
   </>
 );
 

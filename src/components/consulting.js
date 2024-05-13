@@ -2,6 +2,8 @@ import React from "react";
 
 import landingVideo from "../media/Consulting_Compressed.mp4";
 import Hero from "./Hero";
+import CallToAction from "./CallToAction";
+import SectionContainer from "./SectionContainer";
 
 let text = `VISION SUBSEA provides contract client representation, project
 management, and technical advising to a wide range of marine industries
@@ -12,6 +14,9 @@ to go to work to help make your project successful.`;
 const Consulting = () => (
   <>
     <Hero video={landingVideo} text={text} />
+    <SectionContainer>
+      <CallToAction />
+    </SectionContainer>
   </>
 );
 

@@ -1,19 +1,23 @@
-import React from 'react';
+import React from "react";
 
 import landingVideo from "../media/MarineCasualtyResponse_Compressed.mp4";
-import Hero from './Hero';
+import Hero from "./Hero";
+import CallToAction from "./CallToAction";
+import SectionContainer from "./SectionContainer";
 
 let text = `VISION SUBSEA has the ability to respond to marine casualty incidents
 across Alaska. With easily mobilized ROV spreads, VISION SUBSEA provides
 a cost-effective means to complete initial assessments of submerged
 targets and provide owners and first responders with the decision-making
-data they require in these high-pressure situations.`
+data they require in these high-pressure situations.`;
 
 const MarineCasualtyResponse = () => (
   <>
     <Hero video={landingVideo} text={text} />
+    <SectionContainer>
+      <CallToAction />
+    </SectionContainer>
   </>
-)
-
+);
 
 export default MarineCasualtyResponse;
