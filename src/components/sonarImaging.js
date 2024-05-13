@@ -2,6 +2,8 @@ import React from "react";
 
 import landingVideo from "../media/SonarImaging_Compressed.mp4";
 import Hero from "./Hero";
+import CallToAction from "./CallToAction";
+import SectionContainer from "./SectionContainer";
 
 let text = `VISION SUBSEA utilizes Sound Metrics industry leading ARIS Explorer line
 of high-resolution sonars to provide clients with quality acoustic
@@ -12,9 +14,11 @@ industry leading ARIS forward-looking sonars.`;
 
 const SonarImaging = () => (
   <>
-    <Hero video={landingVideo} text={text}/>
+    <Hero video={landingVideo} text={text} />
+    <SectionContainer>
+      <CallToAction />
+    </SectionContainer>
   </>
 );
-
 
 export default SonarImaging;

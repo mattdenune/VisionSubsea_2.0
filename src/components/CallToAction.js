@@ -10,7 +10,7 @@ function CallToAction() {
           <div class="textContent">
             <p class="h1">Contact us now for a free estimate</p>
           </div>
-          <p class="p">Let us solve your problems now!</p>
+          <p class="p">Let us solve your problems!</p>
           <button class="button">
             Get a Free Estimate
             <svg fill="currentColor" viewBox="0 0 24 24" class="icon">

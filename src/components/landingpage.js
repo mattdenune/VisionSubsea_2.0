@@ -6,6 +6,7 @@ import Hero from "./Hero";
 import InfoSection from "./InfoSection";
 import Carousel from "./Carousel";
 import CallToAction from "./CallToAction";
+import '../styles/landingpage.css';
 
 const Landingpage = () => (
   <>
