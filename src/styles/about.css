@@ -1,28 +1,36 @@
+
+.aboutContainer {
+  /* height: 100%; */
+  border: 5px solid red;
+}
+.imageContainer {
+ width: 100%;
+ height: 100vh;
+ background-image: url("../media/about_2.jpg");
+ background-size: cover;
+ display: flex;
+ justify-content: flex-end;
+ align-items: center;
+}
+/* 
 .aboutImage {
-  width: 100vw;
+  width: 100%;
   height: 'auto';
   position: absolute;
   overflow-y: scroll;
-}
+} */
 
-.aboutContainer {
-  height: 100vh;
-}
 
 .aboutCard {
   display: flex;
   flex-direction: column;
   text-align: center;
-  width: 900px;
+  max-width: 900px;
+  /* height: 600px; */
   border: 2px solid white;
   border-radius: 16px;
-  margin-left: 50px;
-  margin-right: 50px;
   padding: 15px;
-  position: relative;
-  left: 45%;
-  top: 20%;
-  bottom: 0;
+  margin: 5%;
   background-color: white;
   opacity: 0.8;
 }
@@ -31,3 +39,32 @@
   margin-top: 20px;
   margin-bottom: 20px;
 }
+
+/* Media Breakpoints */
+
+/* // Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) { 
+  .aboutContainer {
+    /* height: 100%; */
+    border: 5px solid blue;
+  }
+  .aboutText {
+    font-size: 24px;
+  }
+ }
+
+/* // Small devices (landscape phones, less than 768px) */
+ @media (max-width: 767.98px) { 
+  .aboutText {
+    font-size: 24px;
+  }
+  .imageContainer {
+    background-position: right center;
+  }
+ }
+
+ @media (max-width: 575.98px) { 
+  .aboutText {
+    font-size: 18px;
+  }
+ }

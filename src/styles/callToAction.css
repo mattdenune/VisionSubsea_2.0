@@ -75,10 +75,10 @@
   color: #ffff;
   gap: 10px;
   font-weight: bold;
-  border: 3px solid #ffffff4d;
+  border: 3px solid var(--primary100);
   outline: none;
   overflow: hidden;
-  font-size: 15px;
+  font-size: 20px;
   width: 300px;
 }
 
