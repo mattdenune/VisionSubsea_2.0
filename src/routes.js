@@ -9,6 +9,7 @@ import WaterTank from './components/waterTank';
 import NearshoreMooring from './components/nearshoreMooring';
 import SonarImaging from './components/sonarImaging';
 import Consulting from './components/consulting';
+import HabitatSurvey from './components/HabitatSurvey';
 
 function PageRoutes() {
   return (
@@ -20,6 +21,7 @@ function PageRoutes() {
       <Route path="/waterTank" element={<WaterTank />} />
       <Route path="/nearshoreMooring" element={<NearshoreMooring />} />
       <Route path="/sonarImaging" element={<SonarImaging />} />
+      <Route path="/habitatSurvey" element={<HabitatSurvey />} />
       <Route path="/consulting" element={<Consulting />} />
     </Routes>
   );

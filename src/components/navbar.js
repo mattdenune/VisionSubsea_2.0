@@ -1,12 +1,19 @@
-import React, {useState} from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useRef } from "react";
+import { Link } from "react-router-dom";
 
-import logo from '../media/Vision Subsea Color.png'
-
+import logo from "../media/Vision Subsea Color.png";
+import '../styles/navbar.css'
 
 const Navbar = () => {
-
   const [colorChange, setColorchange] = useState(false);
+  const navButton = useRef(null);
+  const linksContainerRef = useRef(null);
+
+  function collapseNav() {
+    navButton.current.classList.add("collapsed");
+    linksContainerRef.current.classList.remove("show");
+  }
+
   const changeNavbarColor = () => {
     if (window.scrollY >= 10) {
       setColorchange(true);
@@ -26,9 +33,15 @@ const Navbar = () => {
     >
       <div className="container-fluid">
         <div className="navbar-brand">
-          <img src={logo} alt="Vision Subsea logo" style={{ width: "150px" }} />
+          <img
+            src={logo}
+            alt="Vision Subsea logo"
+            style={{ width: "150px" }}
+            onClick={collapseNav}
+          />
         </div>
         <button
+          ref={navButton}
           className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
@@ -39,21 +52,25 @@ const Navbar = () => {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
+        <div
+          ref={linksContainerRef}
+          className="collapse navbar-collapse"
+          id="navbarNav"
+        >
           <ul className="navbar-nav">
-            <li className="nav-item h3">
-              <Link to="/" className={`nav-link ${updateTextColor}`}>
+            <li className="nav-item h3" onClick={collapseNav}>
+              <Link to="/" className={`nav-link ${updateTextColor} zoom`}>
                 Home
               </Link>
             </li>
-            <li className="nav-item h3">
-            <Link to="/about" className={`nav-link ${updateTextColor}`}>
+            <li className="nav-item h3" onClick={collapseNav}>
+              <Link to="/about" className={`nav-link ${updateTextColor} zoom`}>
                 About
               </Link>
             </li>
             <li className="nav-item dropdown h3">
               <a
-                className={`nav-link dropdown-toggle ${updateTextColor}`}
+                className={`nav-link dropdown-toggle ${updateTextColor} zoom`}
                 href="#"
                 id="navbarDropdown"
                 role="button"
@@ -63,35 +80,40 @@ const Navbar = () => {
                 Services
               </a>
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li className="h4">
+                <li className="h4" onClick={collapseNav}>
                   <Link className="dropdown-item" to="/waterTank">
                     Water Tank
                   </Link>
                 </li>
-                <li className="h4">
+                <li className="h4" onClick={collapseNav}>
                   <Link className="dropdown-item" to="/nearshoreMooring">
                     Nearshore Moorings
                   </Link>
                 </li>
-                <li className="h4">
+                <li className="h4" onClick={collapseNav}>
                   <Link className="dropdown-item" to="/assetInfrastructure">
                     Asset and Infrastructure
                   </Link>
                 </li>
-                <li className="h4">
+                <li className="h4" onClick={collapseNav}>
+                  <Link className="dropdown-item" to="/habitatSurvey">
+                    Habitat Survey
+                  </Link>
+                </li>
+                <li className="h4" onClick={collapseNav}>
                   <Link className="dropdown-item" to="/marineResponse">
                     Marine Casuality Response
                   </Link>
                 </li>
+                <li className="h4" onClick={collapseNav}>
+                  <Link className="dropdown-item" to="/sonarImaging">
+                  Sonar Imaging
+                  </Link>
+                </li>
               </ul>
             </li>
-            <li className="nav-item h3">
-              <Link to="/sonarImaging" className={`nav-link ${updateTextColor}`}>
-                Sonar Imaging
-              </Link>
-            </li>
-            <li className="nav-item h3">
-              <Link to="/consulting" className={`nav-link ${updateTextColor}`}>
+            <li className="nav-item h3" onClick={collapseNav}>
+              <Link to="/consulting" className={`nav-link ${updateTextColor} zoom`}>
                 Consulting
               </Link>
             </li>

@@ -5,7 +5,7 @@ import "../styles/carousel.css";
 
 const Carousel = () => (
   <div className="carouselContainer">
-    <section className="carouselSection d-flex justify-content-center align-items-start">
+    <section className="carouselSection">
       <div
         id="carouselExampleControls"
         className="innerContainer carousel slide"
@@ -13,10 +13,10 @@ const Carousel = () => (
       >
         <div className="carousel-inner carouselTextContainer">
           {customerComments.map((comment, i) => (
-            <div className={`carousel-item ${i === 0 ? "active" : ""}`} key={i}>
+            <div className={`carousel-item ${i === 0 ? "active" : ""}`} key={i} data-bs-interval="5000">
               <figure className="text-center">
                 <blockquote className="blockquote">
-                  <p className="h3">"{comment.comment}"</p>
+                  <p className="h4">"{comment.comment}"</p>
                 </blockquote>
                 <p className="h4 text-muted">- {comment.name}</p>
               </figure>
@@ -36,7 +36,7 @@ const Carousel = () => (
           <span className="visually-hidden">Previous</span>
         </button>
         <button
-          className="carousel-control-next"
+          className="carousel-control-next "
           type="button"
           data-bs-target="#carouselExampleControls"
           data-bs-slide="next"

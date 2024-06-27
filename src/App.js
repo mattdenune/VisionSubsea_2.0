@@ -6,12 +6,14 @@ import './App.css'
 import PageRoutes from "./routes";
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
+import ScrollToTop from "./helpers/ScrollToTop";
 
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
+      <ScrollToTop />
         <Navbar />
         <PageRoutes />
         <Footer />

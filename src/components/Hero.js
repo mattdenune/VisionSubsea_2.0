@@ -11,7 +11,7 @@ const Hero = ({ video, logo, text }) => (
       {logo && (
         <img src={logo} alt="Vision Subsea logo" className="heroLogo" />
       )}
-      <p>{text}</p>
+      {text && <p>{text}</p>}
     </div>
   </div>
 );
