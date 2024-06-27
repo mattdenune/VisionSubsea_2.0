@@ -1,6 +1,6 @@
 import React from "react";
 
-import landingVideo from "../media/Nearshore Moorings_Compressed.mp4";
+import landingVideo from "../media/nearshore_mooring_compressed.mp4";
 import Hero from "./Hero";
 import CallToAction from "./CallToAction";
 import SectionContainer from "./SectionContainer";

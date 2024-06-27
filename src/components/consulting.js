@@ -1,6 +1,6 @@
 import React from "react";
 
-import landingVideo from "../media/Consulting_Compressed.mp4";
+import landingVideo from "../media/Consulting_updated.mp4";
 import Hero from "./Hero";
 import CallToAction from "./CallToAction";
 import SectionContainer from "./SectionContainer";

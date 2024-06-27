@@ -10,6 +10,7 @@ import NearshoreMooring from './components/nearshoreMooring';
 import SonarImaging from './components/sonarImaging';
 import Consulting from './components/consulting';
 import HabitatSurvey from './components/HabitatSurvey';
+import PageNotFound from './components/PageNotFound';
 
 function PageRoutes() {
   return (
@@ -23,6 +24,7 @@ function PageRoutes() {
       <Route path="/sonarImaging" element={<SonarImaging />} />
       <Route path="/habitatSurvey" element={<HabitatSurvey />} />
       <Route path="/consulting" element={<Consulting />} />
+      <Route path="*" element={<PageNotFound />} />
     </Routes>
   );
 }
