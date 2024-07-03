@@ -18,10 +18,14 @@ function CallToAction() {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  const [show2, setShow2] = useState(false);
+
+  const handleClose2 = () => setShow2(false);
+  const handleShow2 = () => setShow2(true);
 
   useEffect(() => {
-    console.log(userInfo)
-  })
+    console.log(userInfo);
+  });
 
   const sendEmail = () => {
     var templateParams = {
@@ -33,10 +37,10 @@ function CallToAction() {
 
     emailjs
       .send(
-        "service_bk8ljie",
-        "template_gu740jm",
+        "service_2i4l2ak",
+        "template_y4hrx1r",
         templateParams,
-        "PByxhVdkuDB9scoXI"
+        "oHg13hVcC_nsyOZfX"
       )
       .then(
         (result) => {
@@ -64,62 +68,61 @@ function CallToAction() {
     let validationErrors = {};
 
     if (userInfo.email.length === 0 || !isValidEmail(userInfo.email)) {
-      validationErrors.email = 'Email is invalid.'
+      validationErrors.email = "Email is invalid.";
     }
 
-    if (userInfo.name.length === 0){
-      validationErrors.name = 'Please enter a name.'
+    if (userInfo.name.length === 0) {
+      validationErrors.name = "Please enter a name.";
     }
 
     if (userInfo.subject.length === 0) {
-      validationErrors.subject = 'Please enter a subject.'
+      validationErrors.subject = "Please enter a subject.";
     }
 
     if (userInfo.message.length === 0) {
-      validationErrors.message = 'Please enter a message.'
+      validationErrors.message = "Please enter a message.";
     }
 
-    
     if (Object.keys(validationErrors).length > 0) {
-      console.log(validationErrors)
-      console.log("Ammount of Errors:", Object.keys(validationErrors).length)
+      console.log(validationErrors);
+      console.log("Ammount of Errors:", Object.keys(validationErrors).length);
       setErrors(validationErrors);
-      console.log(errors)
+      console.log(errors);
     } else {
       // Handle the successful form submission, e.g., sending formData to a server
       try {
-       await sendEmail();
-       console.log("uerInfo:", userInfo)
-       handleShow();
-       setUserInfo({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
-      })
-      } catch(error) {
-        console.log("🚀 ~ handleSubmit ~ error:", error.message)
-        
+        await sendEmail();
+        console.log("uerInfo:", userInfo);
+        setUserInfo({
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+        handleClose();
+        handleShow2();
+      } catch (error) {
+        console.log("🚀 ~ handleSubmit ~ error:", error.message);
       }
-      console.log('Data sent.')
+      console.log("Data sent.");
       setErrors({}); // Clear any previous errors
     }
   }
   return (
     <div className="cardContainer">
-      <div class="card">
-        <div class="textBox">
-          <div class="textContent">
-            <p class="h1">Contact us now for a free estimate</p>
+      <div className="card">
+        <div className="textBox">
+          <div className="textContent">
+            <p className="h1">Contact us now for a free estimate</p>
           </div>
-          <p class="p">Let us solve your problems!</p>
-          <button class="button" onClick={handleShow}>
+          <p className="p">Let us solve your problems!</p>
+          <button className="button" onClick={handleShow}>
             Get a Free Estimate
-            <svg fill="currentColor" viewBox="0 0 24 24" class="icon">
+            <svg fill="currentColor" viewBox="0 0 24 24" className="icon">
               <path
-                clip-rule="evenodd"
+                clipRule="evenodd"
                 d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
-                fill-rule="evenodd"
+                fillRule="evenodd"
               ></path>
             </svg>
           </button>
@@ -200,14 +203,18 @@ function CallToAction() {
             </button>
           </form>
         </Modal.Body>
-        {/* <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
+      </Modal>
+
+      <Modal show={show2} onHide={handleClose2} animation={false}>
+        <Modal.Header closeButton>
+          <Modal.Title>Thanks for letting us know how we can help.</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>We'll get back to you soon.</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose2}>
             Close
           </Button>
-          <Button variant="primary" onClick={handleSubmit}>
-            Save Changes
-          </Button>
-        </Modal.Footer> */}
+        </Modal.Footer>
       </Modal>
     </div>
   );
