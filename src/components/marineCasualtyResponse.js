@@ -11,9 +11,11 @@ a cost-effective means to complete initial assessments of submerged
 targets and provide owners and first responders with the decision-making
 data they require in these high-pressure situations.`;
 
+let videoUrl = 'ak2fvjj2u6ykzatwlu8j'
+
 const MarineCasualtyResponse = () => (
   <>
-    <Hero video={landingVideo} text={text} />
+    <Hero video={videoUrl} text={text} />
     <SectionContainer>
       <CallToAction />
     </SectionContainer>

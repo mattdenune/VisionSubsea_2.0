@@ -10,16 +10,17 @@ pipeline inspections, VISION SUBSEA uses Remotely Operated Vehicles to
 provide close and general visual inspection of our client’s assets. We
 support our clients needs by providing cost-effective high- quality data
 collection to for regulatory compliance and general condition
-assessment.`
+assessment.`;
+
+let videoUrl = "q4kmj9sferjolomqcwtf";
 
 const AssetInfrastructure = () => (
   <>
-    <Hero video={landingVideo} text= {text}  />
+    <Hero video={videoUrl} text={text} />
     <SectionContainer>
       <CallToAction />
     </SectionContainer>
   </>
 );
-
 
 export default AssetInfrastructure;

@@ -8,9 +8,11 @@ import Carousel from "./Carousel";
 import CallToAction from "./CallToAction";
 import '../styles/landingpage.css';
 
+const videoUrl = "landingVideo_compressionTest_2_d7j9wz"
+
 const Landingpage = () => (
   <>
-    <Hero video={landingVideo} logo={logo} text="See Below the Surface" />
+    <Hero video={videoUrl} logo={logo} text="See Below the Surface" />
     <div className="sectionContainer">
       <InfoSection />
       <CallToAction />

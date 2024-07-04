@@ -11,9 +11,11 @@ inspection team provides all equipment and tooling necessary to perform
 the inspection and allow tank owners and engineers to document
 condition, plan maintenance, and meet regulatory requirements.`
 
+let videoUrl = 'rtf2it5ukj3wcprcxgbi'
+
 const WaterTank = () => (
   <>
-    <Hero video={tankInspectionVideo} text={text} />
+    <Hero video={videoUrl} text={text} />
     <SectionContainer>
       <CallToAction />
     </SectionContainer>

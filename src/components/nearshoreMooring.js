@@ -9,16 +9,17 @@ let text = `VISION SUBSEA specializes in nearshore mooring inspections. Whether 
 is a permanent or seasonal mooring installation, VISION SUBSEA provides
 our clients with high-definition video documenting condition and
 position. This data allows our clients to confirm integrity, plan
-maintenance, and track and trend conditions over time.`
+maintenance, and track and trend conditions over time.`;
+
+let videoUrl = "mhgfzfesn09qu4kf1tyd";
 
 const NearshoreMooring = () => (
   <>
-    <Hero video={landingVideo} text={text}/>
+    <Hero video={videoUrl} text={text} />
     <SectionContainer>
       <CallToAction />
     </SectionContainer>
   </>
 );
-
 
 export default NearshoreMooring;
