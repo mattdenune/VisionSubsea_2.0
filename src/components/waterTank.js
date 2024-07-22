@@ -1,6 +1,7 @@
 import React from "react";
 
-import tankInspectionVideo from "../media/tank_inspection_Compressed.mp4";
+import tankInspectionVideo from "../media/tank_inspection.mp4";
+import image from "../media/WaterTankPoster.png";
 import Hero from "./Hero";
 import CallToAction from "./CallToAction";
 import SectionContainer from "./SectionContainer";
@@ -11,11 +12,10 @@ inspection team provides all equipment and tooling necessary to perform
 the inspection and allow tank owners and engineers to document
 condition, plan maintenance, and meet regulatory requirements.`
 
-let videoUrl = 'rtf2it5ukj3wcprcxgbi'
 
 const WaterTank = () => (
   <>
-    <Hero video={videoUrl} text={text} />
+    <Hero video={tankInspectionVideo} text={text} poster={image} />
     <SectionContainer>
       <CallToAction />
     </SectionContainer>

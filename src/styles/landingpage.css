@@ -59,6 +59,12 @@
 .home-text p {
     justify-self: flex-end;
     font-size: 2em;
+    text-shadow:
+        0.07em 0 black,
+        0 0.07em black,
+        -0.07em 0 black,
+        0 -0.07em black;
+  
 }
 
 .home-btn {

@@ -1,6 +1,7 @@
 import React from "react";
 
-import landingVideo from "../media/Asset and Infrastructure_Compressed.mp4";
+import landingVideo from "../media/Asset and Infrastructure.mp4";
+import image from '../media/AssetAndIfrastructurePoster.png'
 import Hero from "./Hero";
 import CallToAction from "./CallToAction";
 import SectionContainer from "./SectionContainer";
@@ -12,11 +13,10 @@ support our clients needs by providing cost-effective high- quality data
 collection to for regulatory compliance and general condition
 assessment.`;
 
-let videoUrl = "q4kmj9sferjolomqcwtf";
 
 const AssetInfrastructure = () => (
   <>
-    <Hero video={videoUrl} text={text} />
+    <Hero video={landingVideo} text={text} poster={image}/>
     <SectionContainer>
       <CallToAction />
     </SectionContainer>

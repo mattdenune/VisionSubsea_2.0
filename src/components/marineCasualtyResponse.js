@@ -1,6 +1,7 @@
 import React from "react";
 
-import landingVideo from "../media/MarineCasualtyResponse_Compressed.mp4";
+import landingVideo from "../media/MarineCasualtyResponse.mp4";
+import image from "../media/MarineCasualityResponsePoster.png";
 import Hero from "./Hero";
 import CallToAction from "./CallToAction";
 import SectionContainer from "./SectionContainer";
@@ -11,11 +12,10 @@ a cost-effective means to complete initial assessments of submerged
 targets and provide owners and first responders with the decision-making
 data they require in these high-pressure situations.`;
 
-let videoUrl = 'ak2fvjj2u6ykzatwlu8j'
 
 const MarineCasualtyResponse = () => (
   <>
-    <Hero video={videoUrl} text={text} />
+    <Hero video={landingVideo} text={text} poster={image} />
     <SectionContainer>
       <CallToAction />
     </SectionContainer>

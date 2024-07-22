@@ -1,6 +1,7 @@
 import React from "react";
 
-import landingVideo from "../media/Consulting_updated.mp4";
+import landingVideo from "../media/Consulting.mp4";
+import image from '../media/ConsultingPoster.png'
 import Hero from "./Hero";
 import CallToAction from "./CallToAction";
 import SectionContainer from "./SectionContainer";
@@ -11,11 +12,10 @@ including oil and gas, telecom, and renewables. With extensive
 experience and a proven track record, VISION SUBSEA personnel are ready
 to go to work to help make your project successful.`;
 
-let videoUrl = "vrhkjpyzwiiqu39acs4c";
 
 const Consulting = () => (
   <>
-    <Hero video={videoUrl} text={text} />
+    <Hero video={landingVideo} text={text} poster={image} />
     <SectionContainer>
       <CallToAction />
     </SectionContainer>

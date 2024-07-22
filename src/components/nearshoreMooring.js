@@ -1,6 +1,7 @@
 import React from "react";
 
-import landingVideo from "../media/nearshore_mooring_compressed.mp4";
+import landingVideo from "../media/nearshore_mooring.mp4";
+import image from "../media/NearshoreMooringsPoster.png";
 import Hero from "./Hero";
 import CallToAction from "./CallToAction";
 import SectionContainer from "./SectionContainer";
@@ -11,11 +12,10 @@ our clients with high-definition video documenting condition and
 position. This data allows our clients to confirm integrity, plan
 maintenance, and track and trend conditions over time.`;
 
-let videoUrl = "mhgfzfesn09qu4kf1tyd";
 
 const NearshoreMooring = () => (
   <>
-    <Hero video={videoUrl} text={text} />
+    <Hero video={landingVideo} text={text} poster={image} />
     <SectionContainer>
       <CallToAction />
     </SectionContainer>

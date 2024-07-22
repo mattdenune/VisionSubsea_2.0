@@ -1,6 +1,7 @@
 import React from "react";
 
-import landingVideo from "../media/SonarImaging_Compressed.mp4";
+import landingVideo from "../media/SonarImaging.mp4";
+import image from "../media/SonarImagingPoster.png";
 import Hero from "./Hero";
 import CallToAction from "./CallToAction";
 import SectionContainer from "./SectionContainer";
@@ -12,11 +13,10 @@ experienced sonar operators work with clients to develop site specific
 inspection plans that allow for close visual inspections using the
 industry leading ARIS forward-looking sonars.`;
 
-let videoUrl = 'sanemc6axgx1vrytmuxt'
 
 const SonarImaging = () => (
   <>
-    <Hero video={videoUrl} text={text} />
+    <Hero video={landingVideo} text={text} poster={image} />
     <SectionContainer>
       <CallToAction />
     </SectionContainer>
