@@ -1,4 +1,5 @@
 import { BrowserRouter } from "react-router-dom";
+import { HelmetProvider } from 'react-helmet-async';
 
 // import "./styles/landingpage.css";
 import './styles/global.css';
@@ -12,12 +13,15 @@ import ScrollToTop from "./helpers/ScrollToTop";
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
-      <ScrollToTop />
-        <Navbar />
-        <PageRoutes />
-        <Footer />
-      </BrowserRouter>
+      <HelmetProvider>
+        <a href="#main-content" className="skip-link">Skip to main content</a>
+        <BrowserRouter>
+          <ScrollToTop />
+          <Navbar />
+          <PageRoutes />
+          <Footer />
+        </BrowserRouter>
+      </HelmetProvider>
     </div>
   );
 }

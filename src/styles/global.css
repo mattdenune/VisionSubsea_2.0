@@ -1,5 +1,4 @@
-
-  :root {
+:root {
     --primary50: #f7f8f9;
     --primary100: #c9e4e7;
     --primary200: #88c7cd;
@@ -7,3 +6,24 @@
     --primary400: #365b5e;
     --primary500: #2e3737;
   }
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: 1000;
+}
+.skip-link:focus {
+  left: 0;
+  top: 0;
+  width: auto;
+  height: auto;
+  background: #fff;
+  color: #000;
+  padding: 1em;
+  font-size: 1.2em;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
