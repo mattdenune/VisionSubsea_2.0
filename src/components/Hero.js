@@ -10,7 +10,7 @@ const Hero = ({ video, logo, text }) => (
     <div className="bg-overlay"></div>
 
     <div className="home-text">
-      {logo && <img src={logo} alt="Vision Subsea logo" className="heroLogo" />}
+      {logo && <img src={logo} alt="Vision Subsea logo" className="heroLogo" loading="lazy" />}
       {text && <p>{text}</p>}
     </div>
   </div>

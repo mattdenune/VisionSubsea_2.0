@@ -68,3 +68,29 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+---
+
+## SEO & Accessibility
+
+This project has been systematically upgraded to meet high industry standards for SEO and accessibility. Key improvements include:
+
+- **Meta Tags & Head Elements:** Unique titles, descriptions, robots, Open Graph, Twitter Card, and keywords for all main pages using `react-helmet-async`.
+- **Structured Data:** JSON-LD Organization schema on the landing page and Service schema on all service pages for enhanced search visibility.
+- **Canonical URLs:** All main pages include canonical tags to prevent duplicate content issues.
+- **Sitemap & Robots.txt:** `sitemap.xml` and `robots.txt` are present in `/public` for search engine crawling.
+- **Semantic HTML & ARIA:** All main components use semantic elements (`<main>`, `<section>`, `<article>`) and ARIA attributes for improved accessibility.
+- **Headings & Alt Text:** Each page has a single `<h1>`, logical heading structure, and descriptive `alt` attributes for all images.
+- **Image Performance:** Major images use `loading="lazy"` for faster page loads.
+- **Responsive Design:** CSS media queries and viewport meta tag ensure mobile-friendliness.
+- **Clean URLs:** All routes use descriptive, human-readable URLs.
+
+### Recommendations
+- **Content:** Ensure all pages have unique, relevant content and internal links.
+- **Analytics:** Integrate Google Analytics or similar for traffic monitoring.
+- **Search Console:** Set up Google Search Console for indexing and performance insights.
+- **Accessibility:** Periodically review for WCAG compliance and test with screen readers.
+- **Performance:** Consider code splitting and critical CSS for further optimization.
+- **Structured Data Validation:** Use Google’s Rich Results Test to validate JSON-LD.
+
+For more details or to contribute to ongoing SEO/accessibility improvements, see the project source code and documentation.

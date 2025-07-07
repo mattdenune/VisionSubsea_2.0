@@ -6,7 +6,7 @@ import '../styles/footer.css'
 
 const Footer = () => (
   <div className='footerContainer'>
-    <img src={logo} alt='vision subsea logo' className='footerLogo'/>
+    <img src={logo} alt='vision subsea logo' className='footerLogo' loading="lazy"/>
     <p>Alaska, USA</p>
     <p>907-299-4403</p>
     <p>info@visionsubsea.com</p>
